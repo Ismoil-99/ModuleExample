@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name_text">Name:</string>
+    <string name="status">Status:</string>
+    <string name="gender_text">Gender:</string>
+</resources>

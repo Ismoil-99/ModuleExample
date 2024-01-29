@@ -3,13 +3,15 @@ package com.example.data.network.model.character
 import com.google.gson.annotations.SerializedName
 
 
-data class RickMortyModel(
+data class  RickMortyModel(
     @SerializedName("id")
     val id:Int,
     @SerializedName("name")
     val name:String,
     @SerializedName("status")
     val status:String,
+    @SerializedName("species")
+    val species:String,
     @SerializedName("type")
     val type:String,
     @SerializedName("gender")
@@ -20,10 +22,8 @@ data class RickMortyModel(
     val location: LocationModel,
     @SerializedName("image")
     val image:String,
-    @SerializedName("episode")
-    val episode:List<EpisodeModel>,
     @SerializedName("url")
     val url:String,
-    @SerializedName("url")
+    @SerializedName("created")
     val created:String
 )
