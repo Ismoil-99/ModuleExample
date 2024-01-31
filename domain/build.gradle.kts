@@ -16,6 +16,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 dependencies {
 
 
-    implementation("com.google.dagger:hilt-android-compiler:2.48")
-    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    //Di
+    implementation(Dependencies.Hilt.compiler)
+    kapt(Dependencies.Hilt.compiler)
 }

@@ -26,4 +26,13 @@ object Dependencies {
         const val retrofit = "com.squareup.retrofit2:retrofit:$version"
         const val converterGson = "com.squareup.retrofit2:converter-gson:$version"
     }
+
+    object Hilt {
+        const val version =  "2.48"
+
+        const val android = "com.google.dagger:hilt-android:$version"
+        const val compiler = "com.google.dagger:hilt-android-compiler:$version"
+        const val plugin = "com.google.dagger.hilt.android"
+    }
+
 }

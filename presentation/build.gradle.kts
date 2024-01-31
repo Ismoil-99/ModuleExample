@@ -1,10 +1,8 @@
-import com.android.build.api.dsl.Packaging
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
-    id("com.google.dagger.hilt.android")
+    id(Dependencies.Hilt.plugin)
 }
 
 android {
@@ -45,11 +43,15 @@ dependencies {
 
     implementation(project(":domain"))
 
+    //Core
     implementation(Dependencies.Core.core)
-    implementation(Dependencies.UiComponent.material)
 
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    //Ui
+    implementation(Dependencies.UiComponent.material)
     implementation(Dependencies.Activity.activity)
+
+    //Di
+    implementation(Dependencies.Hilt.android)
+    kapt(Dependencies.Hilt.compiler)
 
 }

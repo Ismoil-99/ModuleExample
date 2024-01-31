@@ -37,12 +37,15 @@ android {
 dependencies {
     implementation(project(":domain"))
 
+    //Network
     implementation(Dependencies.Retrofit.retrofit)
     implementation(Dependencies.Retrofit.converterGson)
 
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    //Di
+    implementation(Dependencies.Hilt.android)
+    kapt(Dependencies.Hilt.compiler)
 
+    //coroutines
     implementation(Dependencies.Kotlin.coroutines)
 
 

@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
-    id("com.google.dagger.hilt.android")
+    id(Dependencies.Hilt.plugin)
 }
 
 android {
@@ -47,13 +47,18 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":data"))
 
+    //Core
     implementation(Dependencies.Core.core)
+
+    //Ui
     implementation(Dependencies.UiComponent.material)
     implementation(Dependencies.UiComponent.constraintLayout)
 
+    //Di
+    implementation(Dependencies.Hilt.android)
+    kapt(Dependencies.Hilt.compiler)
 
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    //Network
     implementation(Dependencies.Retrofit.retrofit)
     implementation(Dependencies.Retrofit.converterGson)
 }
