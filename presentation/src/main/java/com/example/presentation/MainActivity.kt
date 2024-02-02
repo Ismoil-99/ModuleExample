@@ -8,6 +8,7 @@ import android.util.Log
 import androidx.activity.viewModels
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.lifecycleScope
+import com.example.core.base.BaseFragment
 import com.example.domain.entities.Results
 import com.example.presentation.databinding.ActivityMainBinding
 import com.google.android.material.textfield.TextInputEditText
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity() {
             binding.putId.isEnabled = !it.isNullOrEmpty()
         }
 
+        val fragment = BaseFragment()
+        Log.d("value","${fragment.base}")
         binding.putId.setOnClickListener {
             lifecycleScope.launch {
                 val values = viewModel.getCharacterById(binding.putIdCharacter.text.toString())

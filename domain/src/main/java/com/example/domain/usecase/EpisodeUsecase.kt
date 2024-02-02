@@ -5,5 +5,6 @@ import javax.inject.Inject
 
 
 class EpisodeUsecase @Inject constructor (private val episodeRepository: EpisodeRepository ) {
-    suspend fun getCharacter(id:String) = episodeRepository.getCharacterById(id)
+    suspend operator fun invoke(id: String) = episodeRepository.getCharacterById(id)
+    //suspend fun getCharacter(id:String) = episodeRepository.getCharacterById(id)
 }

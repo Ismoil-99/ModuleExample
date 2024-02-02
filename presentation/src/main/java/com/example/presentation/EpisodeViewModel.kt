@@ -10,5 +10,5 @@ import javax.inject.Inject
 class EpisodeViewModel  @Inject constructor(private val episodeUsecase: EpisodeUsecase) :ViewModel() {
 
 
-    suspend fun getCharacterById(id:String) = episodeUsecase.getCharacter(id)
+    suspend fun getCharacterById(id:String) = episodeUsecase.invoke(id)
 }
